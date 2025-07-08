@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Terminal, Shield, Cpu, Users, Mail } from 'lucide-react';
+import { Terminal, Shield, Cpu, Users, Mail, Menu } from 'lucide-react';
 import { NavItem, Section } from './types';
 import Header from './components/ui/Header';
 import Sidebar from './components/ui/Sidebar';
@@ -14,6 +14,7 @@ const OARKWebsite: React.FC = () => {
   const [isRevealed, setIsRevealed] = useState(false);
   const [currentSection, setCurrentSection] = useState<Section>('home');
   const [isLoading, setIsLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navItems: NavItem[] = [
     { id: 'home', label: 'Accueil', icon: <Terminal className="w-4 h-4" /> },
@@ -27,6 +28,18 @@ const OARKWebsite: React.FC = () => {
     setTimeout(() => setIsLoading(false), 1500);
   }, []);
 
+  // Fermer la sidebar quand on clique en dehors ou qu'on change de section
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setSidebarOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleEnterUniverse = () => {
     setShowIntroModal(true);
   };
@@ -34,6 +47,14 @@ const OARKWebsite: React.FC = () => {
   const handleImageClick = () => {
     setIsRevealed(true);
     setTimeout(() => setShowIntroModal(false), 800);
+  };
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
   };
 
   if (isLoading) {
@@ -53,23 +74,49 @@ const OARKWebsite: React.FC = () => {
         navItems={navItems}
       />
 
+      {/* Menu Hamburger pour mobile (visible uniquement quand isRevealed est true) */}
+      {isRevealed && (
+        <button
+          onClick={toggleSidebar}
+          className="fixed top-4 left-4 z-50 p-2 bg-slate-800/90 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 lg:hidden"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+      )}
+
       {/* Main Content */}
       <main className="pt-20">
         {!isRevealed ? (
           <LandingPage onEnterUniverse={handleEnterUniverse} />
         ) : (
           <div className="flex min-h-screen">
-  <div className="hidden md:block w-64">
-    <Sidebar 
-      currentSection={currentSection}
-      setCurrentSection={setCurrentSection}
-      navItems={navItems}
-    />
-  </div>
-  <div className="flex-1">
-    <MainContent currentSection={currentSection} />
-  </div>
-</div>
+            {/* Sidebar */}
+            <div className="hidden lg:block w-64">
+              <Sidebar 
+                currentSection={currentSection}
+                setCurrentSection={setCurrentSection}
+                navItems={navItems}
+                isOpen={sidebarOpen}
+                onClose={closeSidebar}
+              />
+            </div>
+            
+            {/* Sidebar mobile (overlay) */}
+            <div className="lg:hidden">
+              <Sidebar 
+                currentSection={currentSection}
+                setCurrentSection={setCurrentSection}
+                navItems={navItems}
+                isOpen={sidebarOpen}
+                onClose={closeSidebar}
+              />
+            </div>
+            
+            {/* Main Content */}
+            <div className="flex-1 lg:ml-0">
+              <MainContent currentSection={currentSection} />
+            </div>
+          </div>
         )}
       </main>
 

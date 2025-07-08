@@ -12,6 +12,10 @@ const HomeSection: React.FC = () => (
         <h3 className="text-xl font-bold text-purple-400 mb-4">Communauté</h3>
         <p className="text-gray-300">Rejoignez notre communauté de gamers et partagez vos expériences.</p>
       </div>
+      <div className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-cyan-400/20">
+        <h3 className="text-xl font-bold text-purple-400 mb-4">Evénements</h3>
+        <p className="text-gray-300">Retour sur la Japan Expo 2025.</p>
+      </div>
     </div>
   </div>
 );

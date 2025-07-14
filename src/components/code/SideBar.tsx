@@ -14,6 +14,8 @@ import { cn } from "../../app/lib/utils";
 import Image from "next/image";
 import Carouselhome from "./CarouselHome";
 import Loader from "../ui/loader";
+import Card from "./Cards";
+import CardOldSchool from "./CardOldSchool";
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -165,13 +167,12 @@ const NouveautesContent = () => (
     
     <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
         <Carouselhome/>
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 text-white">
-        <h3 className="text-xl font-semibold mb-2">Nouvelle fonctionnalité</h3>
-        <p>Découvrez les dernières améliorations de notre plateforme.</p>
-      </div>
-      <div className="bg-gradient-to-r from-green-500 to-teal-600 rounded-lg p-6 text-white">
-        <h3 className="text-xl font-semibold mb-2">Mise à jour</h3>
-        <p>Version 2.0 maintenant disponible avec de nouvelles options.</p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
       </div>
     </div>
   </div>
@@ -180,20 +181,44 @@ const NouveautesContent = () => (
 const AProposContent = () => (
   <div className="space-y-4">
     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">À propos</h2>
-    <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
-      <p className="text-gray-600 dark:text-gray-300 mb-4">
-        Notre entreprise se spécialise dans le développement de solutions innovantes 
-        pour les défis technologiques modernes.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    
+    {/* Première ligne avec CardOldSchool à droite */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div></div> {/* Espace vide à gauche */}
+      <div className="flex justify-center">
+        <CardOldSchool/>
+      </div>
+    </div>
+    
+    {/* Deuxième ligne avec trois cartes */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
         <div className="text-center">
           <div className="text-3xl font-bold text-blue-600">10+</div>
           <div className="text-sm text-gray-500">Années d&apos;expérience</div>
         </div>
+      </div>
+      
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
         <div className="text-center">
           <div className="text-3xl font-bold text-green-600">500+</div>
           <div className="text-sm text-gray-500">Projets réalisés</div>
         </div>
+      </div>
+      
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
         <div className="text-center">
           <div className="text-3xl font-bold text-purple-600">50+</div>
           <div className="text-sm text-gray-500">Clients satisfaits</div>
@@ -206,19 +231,39 @@ const AProposContent = () => (
 const BattleSwordContent = () => (
   <div className="space-y-4">
     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Battle Sword</h2>
-    <div className="bg-gradient-to-r from-red-500 to-orange-600 rounded-lg p-6 text-white">
-      <h3 className="text-xl font-semibold mb-2">Jeu de Combat</h3>
-      <p className="mb-4">
-        Plongez dans l&apos;univers épique de Battle Sword, où stratégie et action se rencontrent.
-      </p>
-      <div className="grid grid-cols-2 gap-4">
-        <div className="bg-white/10 rounded p-3">
-          <div className="text-sm opacity-90">Joueurs actifs</div>
-          <div className="text-2xl font-bold">1.2M</div>
+    
+    {/* Deuxième ligne avec trois cartes */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-blue-600">10+</div>
+          <div className="text-sm text-gray-500">Années d&apos;expérience</div>
         </div>
-        <div className="bg-white/10 rounded p-3">
-          <div className="text-sm opacity-90">Batailles jouées</div>
-          <div className="text-2xl font-bold">15.6M</div>
+      </div>
+      
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-green-600">500+</div>
+          <div className="text-sm text-gray-500">Projets réalisés</div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-purple-600">50+</div>
+          <div className="text-sm text-gray-500">Clients satisfaits</div>
         </div>
       </div>
     </div>
@@ -228,25 +273,47 @@ const BattleSwordContent = () => (
 const OArkContent = () => (
   <div className="space-y-4">
     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">O.ARK</h2>
-    <div className="bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg p-6 text-white">
-      <h3 className="text-xl font-semibold mb-2">Plateforme de Sécurité</h3>
-      <p className="mb-4">
-        O.ARK offre une protection complète pour vos données et applications.
-      </p>
-      <div className="space-y-3">
-        <div className="flex items-center space-x-2">
-          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-          <span>Chiffrement end-to-end</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-          <span>Surveillance 24/7</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-          <span>Backup automatique</span>
+    
+    {/* Deuxième ligne avec trois cartes */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Qu’est ce qu’O-A.R.K ?
+Comment cela fonctionne ?
+        </p>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-blue-600">10+</div>
+          <div className="text-sm text-gray-500">Années d&apos;expérience</div>
         </div>
       </div>
+      
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-green-600">500+</div>
+          <div className="text-sm text-gray-500">Projets réalisés</div>
+        </div>
+      </div>
+      
+      <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+        <p className="text-gray-600 dark:text-gray-300 mb-4">
+          Notre entreprise se spécialise dans le développement de solutions innovantes 
+          pour les défis technologiques modernes.
+        </p>
+        <div className="text-center">
+          <div className="text-3xl font-bold text-purple-600">50+</div>
+          <div className="text-sm text-gray-500">Clients satisfaits</div>
+        </div>
+      </div>
+      <Image
+                    src="/images/hardware.png"
+                    width={700}
+                    height={700}
+                    alt="Logo de CODATECH"
+                  />
     </div>
   </div>
 );
@@ -264,7 +331,7 @@ const ContactContent = () => (
           </div>
           <div className="flex items-center space-x-3">
             <div className="h-5 w-5 text-gray-500">📱</div>
-            <span>+33 1 23 45 67 89</span>
+            <span>+33 6 67 42 07 74</span>
           </div>
           <div className="flex items-center space-x-3">
             <div className="h-5 w-5 text-gray-500">📍</div>

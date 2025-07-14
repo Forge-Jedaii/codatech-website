@@ -600,6 +600,7 @@ const StyledWrapper = styled.div`
     justify-content: center;
     opacity: 0.5;
     font-family: Montserrat;
+    
   }
   .text_4041 {
     transform: scaleY(24.5) scaleX(9);
@@ -652,6 +653,7 @@ const StyledWrapper = styled.div`
     .screenM {
       display: none;
     }
+      
   }`;
 
 export default Card;

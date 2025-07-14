@@ -13,6 +13,7 @@ import { motion } from "motion/react";
 import { cn } from "../../app/lib/utils";
 import Image from "next/image";
 import Carouselhome from "./CarouselHome";
+import Loader from "../ui/loader";
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -71,8 +72,7 @@ export function SidebarDemo() {
 
   const handleLinkClick = (linkId: string) => {
     if (linkId === "logout") {
-      // Logique de déconnexion
-      console.log("Déconnexion...");
+      window.location.href = "/404";
       return;
     }
     setActiveSection(linkId);
@@ -260,7 +260,7 @@ const ContactContent = () => (
         <div className="space-y-3">
           <div className="flex items-center space-x-3">
             <IconMail className="h-5 w-5 text-gray-500" />
-            <span>contact@codatech.com</span>
+            <span>contact@oark.io</span>
           </div>
           <div className="flex items-center space-x-3">
             <div className="h-5 w-5 text-gray-500">📱</div>
@@ -268,8 +268,9 @@ const ContactContent = () => (
           </div>
           <div className="flex items-center space-x-3">
             <div className="h-5 w-5 text-gray-500">📍</div>
-            <span>Paris, France</span>
+            <span>Nice, France</span>
           </div>
+            <Loader/>
         </div>
       </div>
       <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">

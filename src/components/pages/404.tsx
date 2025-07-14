@@ -1,4 +1,5 @@
 import React from 'react';
+// import Link from 'next/link';
 
 const Custom404 = () => {
   return (
@@ -562,6 +563,9 @@ const Custom404 = () => {
               </div>
             </div>
             <div className="text_404">
+            
+              <a className="back_home">Retour à l&apos;accueil</a>
+
               <div className="text_4041">4</div>
               <div className="text_4042">0</div>
               <div className="text_4043">4</div>

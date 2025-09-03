@@ -7,16 +7,15 @@ import "keen-slider/keen-slider.min.css";
 const Carouselhome: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "snap",
-    slides: {
-      perView: 1,   // ✅ un seul slide à la fois
-      spacing: 0,   // ✅ pas d’espace entre
-    },
+    slides: { perView: 1, spacing: 0 },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
+    drag: true, // 🔹 active le drag tactile
+    rubberband: true, // 🔹 ajoute un effet de “rebond” naturel
   });
 
   const items = [
@@ -51,16 +50,15 @@ const Carouselhome: React.FC = () => {
   ];
 
   return (
-    <div className="relative w-full h-[400px] rounded-2xl overflow-hidden bg-slate-900 border border-cyan-400/30 shadow-2xl">
-      {/* Bouton gauche */}
+    <div className="relative w-full h-[60vh] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden bg-slate-900 border border-cyan-400/30 shadow-2xl">
+      
+      {/* Boutons de navigation */}
       <button
         onClick={() => instanceRef.current?.prev()}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 backdrop-blur-sm border border-white/20 rounded-full p-3 text-white hover:bg-black/70 transition-all shadow-xl"
       >
         ◀
       </button>
-
-      {/* Bouton droit */}
       <button
         onClick={() => instanceRef.current?.next()}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 backdrop-blur-sm border border-white/20 rounded-full p-3 text-white hover:bg-black/70 transition-all shadow-xl"
@@ -81,13 +79,14 @@ const Carouselhome: React.FC = () => {
             />
 
             {/* Contenu */}
-            <div className="relative z-10 h-full flex flex-col justify-center p-8 md:p-12">
+            <div className="relative z-10 h-full flex flex-col justify-center p-6 sm:p-8 md:p-12 lg:p-16">
               <h2
-                className={`text-4xl md:text-5xl font-black text-${item.accentColor} mb-6`}
+                className={`font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6`}
+                style={{ color: `#${item.accentColor}` }}
               >
                 {item.title}
               </h2>
-              <p className="text-white/90 text-lg md:text-xl font-medium leading-relaxed">
+              <p className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed max-w-3xl">
                 {item.description}
               </p>
             </div>
@@ -96,7 +95,7 @@ const Carouselhome: React.FC = () => {
       </div>
 
       {/* Bullets */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
         {items.map((_, i) => (
           <button
             key={i}

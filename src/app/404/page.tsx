@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Custom404() {
   return (
-    <div className="flex flex-col items-center justify-center ">
+    <div className="flex flex-colcd items-center justify-center ">
       <Card/>
       <div>
       <Link 

@@ -141,7 +141,7 @@ const BattleSword: React.FC = () => {
         custom={3}
       >
         <div className="md:w-1/2">
-          <Image src="/images/borne-arcade.png" width={600} height={400} alt="Borne d'arcade Battle Sword" className="rounded-xl shadow-lg"/>
+          <Image src="/images/materiel.png" width={600} height={400} alt="Borne d'arcade Battle Sword" className="rounded-xl shadow-lg"/>
         </div>
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">La Borne d’arcade</h2>
@@ -214,12 +214,12 @@ const BattleSword: React.FC = () => {
           <div className="text-gray-500 text-sm mt-2">Ans d’expérience dans le loisir</div>
         </div>
         <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
-          <div className="text-3xl font-bold text-green-600">4</div>
+          <div className="text-3xl font-bold text-green-600">2</div>
           <div className="text-gray-500 text-sm mt-2">Joueurs simultanés par arène</div>
         </div>
         <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
-          <div className="text-3xl font-bold text-purple-600">15+</div>
-          <div className="text-gray-500 text-sm mt-2">Pays d’expérience internationale</div>
+          <div className="text-3xl font-bold text-purple-600">100000%</div>
+          <div className="text-gray-500 text-sm mt-2">de fun</div>
         </div>
       </motion.section>
 
@@ -234,7 +234,7 @@ const BattleSword: React.FC = () => {
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Jouez sans limites</h2>
         <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
-          Une activité rentable, adaptée à toutes les tranches d’âge, modulable et facile à installer. Battle Sword est le duel connecté ultime, sécurisé et fun, à refaire encore et encore !
+          Une activité ludique et physique, adaptée à toutes les tranches d’âge, modulable et facile à installer. Battle Sword est le duel connecté ultime, sécurisé et fun, à refaire encore et encore !
         </p>
       </motion.section>
 

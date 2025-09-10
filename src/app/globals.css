@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --background: #000000;
   --foreground: #ffffff;
@@ -5,10 +7,17 @@
 
 html.dark {
   --background: #000000;
-  /* même valeur que root */
   --foreground: #ffffff;
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Fond et texte uniformes */
 html,
 body {
   background-color: var(--background) !important;

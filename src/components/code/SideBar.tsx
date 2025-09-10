@@ -13,11 +13,12 @@ import { motion } from "motion/react";
 import { cn } from "../../app/lib/utils";
 import Image from "next/image";
 import Carouselhome from "./CarouselHome";
-import Loader from "../ui/loader";
 import Card from "./Cards";
-import CardOldSchool from "./CardOldSchool";
 import BattleSword from "../pages/BattleSword";
 import Link from "next/link";
+import ContactContent from "../pages/Contact";
+import OArkContent from "../pages/Oark";
+import AProposContent from "../pages/About";
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -187,167 +188,14 @@ const NouveautesContent = () => (
   </div>
 );
 
-const AProposContent = () => (
-  <div className="space-y-4">
-    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">À propos</h2>
-    
-    {/* Première ligne avec CardOldSchool */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className="lg:block hidden"></div>
-      <div className="flex justify-center">
-        <CardOldSchool/>
-      </div>
-    </div>
-    
-    {/* Deuxième ligne avec trois cartes */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-          Notre entreprise se spécialise dans le développement de solutions innovantes 
-          pour les défis technologiques modernes.
-        </p>
-        <div className="text-center">
-          <div className="text-2xl sm:text-3xl font-bold text-blue-600">10+</div>
-          <div className="text-xs sm:text-sm text-gray-500">Années d&apos;expérience</div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-          Notre entreprise se spécialise dans le développement de solutions innovantes 
-          pour les défis technologiques modernes.
-        </p>
-        <div className="text-center">
-          <div className="text-2xl sm:text-3xl font-bold text-green-600">500+</div>
-          <div className="text-xs sm:text-sm text-gray-500">Projets réalisés</div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm md:col-span-2 lg:col-span-1">
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-          Notre entreprise se spécialise dans le développement de solutions innovantes 
-          pour les défis technologiques modernes.
-        </p>
-        <div className="text-center">
-          <div className="text-2xl sm:text-3xl font-bold text-purple-600">50+</div>
-          <div className="text-xs sm:text-sm text-gray-500">Clients satisfaits</div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+
 
 const BattleSwordContent = () => (
   <BattleSword/>
 );
 
-const OArkContent = () => (
-  <div className="space-y-4">
-    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">O.ARK</h2>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-          Qu&apos;est ce qu&apos;O-A.R.K ?
-          Comment cela fonctionne ?
-        </p>
-        <div className="text-center">
-          <div className="text-2xl sm:text-3xl font-bold text-blue-600">10+</div>
-          <div className="text-xs sm:text-sm text-gray-500">Années d&apos;expérience</div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-          Notre entreprise se spécialise dans le développement de solutions innovantes 
-          pour les défis technologiques modernes.
-        </p>
-        <div className="text-center">
-          <div className="text-2xl sm:text-3xl font-bold text-green-600">500+</div>
-          <div className="text-xs sm:text-sm text-gray-500">Projets réalisés</div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm md:col-span-2 lg:col-span-1">
-        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-          Notre entreprise se spécialise dans le développement de solutions innovantes 
-          pour les défis technologiques modernes.
-        </p>
-        <div className="text-center">
-          <div className="text-2xl sm:text-3xl font-bold text-purple-600">50+</div>
-          <div className="text-xs sm:text-sm text-gray-500">Clients satisfaits</div>
-        </div>
-      </div>
-    </div>
-    
-    <div className="mt-6 flex justify-center">
-      <div className="w-full max-w-md sm:max-w-lg">
-        <Image
-          src="/images/hardware.png"
-          width={700}
-          height={700}
-          alt="Logo de CODATECH"
-          className="w-full h-auto rounded-lg shadow-lg"
-        />
-      </div>
-    </div>
-  </div>
-);
 
-const ContactContent = () => (
-  <div className="space-y-4">
-    <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Contact</h2>
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
-        <h3 className="text-base sm:text-lg font-semibold mb-4">Informations de contact</h3>
-        <div className="space-y-3">
-          <div className="flex items-center space-x-3">
-            <IconMail className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 flex-shrink-0" />
-            <span className="text-sm sm:text-base break-all">contact@oark.io</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 flex-shrink-0 text-center">📱</div>
-            <span className="text-sm sm:text-base">+33 6 67 42 07 74</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 flex-shrink-0 text-center">📍</div>
-            <span className="text-sm sm:text-base">Nice, France</span>
-          </div>
-          <div className="mt-4">
-            <Loader/>
-          </div>
-        </div>
-      </div>
-      
-      <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
-        <h3 className="text-base sm:text-lg font-semibold mb-4">Nous contacter</h3>
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Votre nom"
-            className="w-full p-2 sm:p-3 text-sm sm:text-base border rounded-lg dark:bg-neutral-700 dark:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <input
-            type="email"
-            placeholder="Votre email"
-            className="w-full p-2 sm:p-3 text-sm sm:text-base border rounded-lg dark:bg-neutral-700 dark:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <textarea
-            placeholder="Votre message"
-            rows={4}
-            className="w-full p-2 sm:p-3 text-sm sm:text-base border rounded-lg dark:bg-neutral-700 dark:border-neutral-600 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-          ></textarea>
-          <button 
-            type="submit"
-            className="w-full bg-blue-600 text-white p-2 sm:p-3 text-sm sm:text-base rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          >
-            Envoyer
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-);
+
 
 // Dashboard mis à jour avec navigation
 const Dashboard = ({ activeSection }: { activeSection: string }) => {

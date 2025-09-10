@@ -178,12 +178,21 @@ const NouveautesContent = () => (
         <Carouselhome/>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
+      <div className="flex flex-wrap justify-center gap-6">
+  <div className="w-full sm:w-64 md:w-72 lg:w-80">
+    <Card />
+  </div>
+  <div className="w-full sm:w-64 md:w-72 lg:w-80">
+    <Card />
+  </div>
+  <div className="w-full sm:w-64 md:w-72 lg:w-80">
+    <Card />
+  </div>
+  <div className="w-full sm:w-64 md:w-72 lg:w-80">
+    <Card />
+  </div>
+</div>
+
     </div>
   </div>
 );

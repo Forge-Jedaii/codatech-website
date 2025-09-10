@@ -31,7 +31,7 @@ const AProposContent = () => {
       {/* Les directeurs */}
       <section>
         <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center text-gray-900 dark:text-white">
-          Les Directeurs
+          Notre équipe
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <DirectorCard

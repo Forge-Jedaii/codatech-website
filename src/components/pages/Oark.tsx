@@ -12,6 +12,7 @@ const OArkContent = () => {
           <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
             Qu&apos;est ce qu&apos;O-A.R.K ?  
             Comment cela fonctionne ?
+            Vous êtes le héros de votre propre aventure
           </p>
           <div className="text-center">
             <div className="text-2xl sm:text-3xl font-bold text-blue-600">10+</div>
@@ -21,12 +22,11 @@ const OArkContent = () => {
 
         <div className="bg-white dark:bg-neutral-800 rounded-lg p-4 sm:p-6 shadow-sm">
           <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
-            Notre entreprise se spécialise dans le développement de solutions innovantes 
-            pour les défis technologiques modernes.
+            Notre technologie innovante permet de combiner le sport ainsi que le monde virtuel des jeux vidéos, alliant compétences et gamification.
           </p>
           <div className="text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-green-600">500+</div>
-            <div className="text-xs sm:text-sm text-gray-500">Projets réalisés</div>
+            <div className="text-2xl sm:text-3xl font-bold text-green-600">50 joueurs max</div>
+            <div className="text-xs sm:text-sm text-gray-500">Mode multijoueur</div>
           </div>
         </div>
 

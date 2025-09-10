@@ -4,6 +4,7 @@ import React from "react";
 import CardOldSchool from "../code/CardOldSchool";
 import Image from "next/image";
 
+
 const AProposContent = () => {
   return (
     <div className="space-y-10">
@@ -37,7 +38,7 @@ const AProposContent = () => {
           <DirectorCard
             name="Anthony LOCOCO"
             role="Directeur Général"
-            image="/images/anthony.jpg"
+            image="/images/anthony.jpeg"
             description="Image de la société, Anthony est en charge de la stratégie globale et du développement commercial de CODATECH."
           />
           <DirectorCard
@@ -123,8 +124,18 @@ type TechCardProps = {
 };
 
 const TechCard = ({ title, description, image }: TechCardProps) => {
+  // Couleurs de bordure en fonction du titre
+  const hoverBorders: Record<string, string> = {
+    "O.A.R.K": "hover:border-purple-500",
+    "BattleSword": "hover:border-green-500",
+  };
+
   return (
-    <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-4 sm:p-6 flex flex-col items-center text-center">
+    <div
+      className={`bg-white dark:bg-neutral-800 rounded-lg shadow-md p-6 flex flex-col items-center text-center 
+                  transform transition duration-300 hover:scale-105 cursor-pointer border-2 border-transparent
+                  ${hoverBorders[title] || "hover:border-blue-500"}`}
+    >
       <Image
         src={image}
         alt={title}
@@ -138,16 +149,25 @@ const TechCard = ({ title, description, image }: TechCardProps) => {
   );
 };
 
+
+
 type ServiceCardProps = {
   title: string;
 };
 
 const ServiceCard = ({ title }: ServiceCardProps) => {
   return (
-    <div className="bg-white dark:bg-neutral-800 rounded-lg shadow p-4 sm:p-6 text-center hover:shadow-lg transition">
+    <div
+      className="bg-white dark:bg-neutral-800 rounded-lg p-6 text-center shadow-sm 
+                 transform transition duration-300 
+                 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900 
+                 hover:shadow-lg cursor-pointer"
+    >
       <h4 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h4>
     </div>
   );
 };
+
+
 
 export default AProposContent;

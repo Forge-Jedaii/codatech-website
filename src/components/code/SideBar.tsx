@@ -19,6 +19,7 @@ import Link from "next/link";
 import ContactContent from "../pages/Contact";
 import OArkContent from "../pages/Oark";
 import AProposContent from "../pages/About";
+import Card1 from "./Cards1";
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -183,7 +184,7 @@ const NouveautesContent = () => (
     <Card />
   </div>
   <div className="w-full sm:w-64 md:w-72 lg:w-80">
-    <Card />
+    <Card1 />
   </div>
   <div className="w-full sm:w-64 md:w-72 lg:w-80">
     <Card />

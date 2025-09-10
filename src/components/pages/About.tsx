@@ -37,19 +37,19 @@ const AProposContent = () => {
           <DirectorCard
             name="Anthony LOCOCO"
             role="Directeur Général"
-            image="/images/director1.jpg"
+            image="/images/anthony.png"
             description="Image de la société, Anthony est en charge de la stratégie globale et du développement commercial de CODATECH."
           />
           <DirectorCard
             name="Jehan GUILLOT"
             role="Directeur Technique"
-            image="/images/director2.jpg"
+            image="/images/jehan.jpeg"
             description="Expert en ingénierie électronique, Jehan est le maître d'œuvre de la technologie O.A.R.K."
           />
           <DirectorCard
             name="Damien PINAUDEAU"
             role="Directeur Opérationnel"
-            image="/images/director3.jpg"
+            image="/images/damien.jpeg"
             description="Spécialiste en organisation et logistique, Damien supervise l'administration et ressources de CODATECH."
           />
         </div>

@@ -74,7 +74,7 @@ const BattleSword: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Chaque card avec hover coloré */}
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-blue-100 dark:hover:bg-blue-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Liberté de mouvement" className="mb-4"/>
+            <Image src="/images/picto1.png" width={200} height={200} alt="Liberté de mouvement" className="mb-4"/>
             <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Liberté de mouvement</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               Sans câbles ni armures, profitez d’une totale liberté pour vous déplacer et combattre.
@@ -82,7 +82,7 @@ const BattleSword: React.FC = () => {
           </div>
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-green-100 dark:hover:bg-green-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Sécurité" className="mb-4"/>
+            <Image src="/images/picto4.png" width={110} height={110} alt="Sécurité" className="mb-4"/>
             <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Sécurité optimale</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               Garnissage en mousse pour une protection maximale des joueurs.
@@ -90,15 +90,15 @@ const BattleSword: React.FC = () => {
           </div>
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-purple-100 dark:hover:bg-purple-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Multijoueur" className="mb-4"/>
-            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Multijoueur</h3>
+            <Image src="/images/picto3.png" width={200} height={200} alt="Multijoueur" className="mb-4"/>
+            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Adapté à tous les âges</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
-              2 joueurs par arène avec scores affichés en direct.
+              Équipement modulable dès 6 ans, pour enfants et adultes.
             </p>
           </div>
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-yellow-100 dark:hover:bg-yellow-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Sans fil" className="mb-4"/>
+            <Image src="/images/picto6.png" width={200} height={200} alt="Sans fil" className="mb-4"/>
             <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Sans fil</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               Wi-Fi haute vitesse intégré, jouez partout sans aucune restriction.
@@ -106,7 +106,7 @@ const BattleSword: React.FC = () => {
           </div>
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-pink-100 dark:hover:bg-pink-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Jouer longtemps" className="mb-4"/>
+            <Image src="/images/picto5.png" width={155} height={155} alt="Jouer longtemps" className="mb-4"/>
             <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Jouer sans interruption</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               Jusqu’à 6 heures d’utilisation continue pour profiter pleinement de l’expérience.
@@ -114,15 +114,15 @@ const BattleSword: React.FC = () => {
           </div>
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-orange-100 dark:hover:bg-orange-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Adapté aux jeunes" className="mb-4"/>
-            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Adapté à tous les âges</h3>
+            <Image src="/images/picto2.png" width={200} height={200} alt="Adapté aux jeunes" className="mb-4"/>
+            <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Multijoueur</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
-              Équipement modulable dès 6 ans, pour enfants et adultes.
+              2 joueurs par arène avec scores affichés en direct.
             </p>
           </div>
 
           <div className="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm flex flex-col items-center text-center transform transition duration-300 hover:scale-105 hover:bg-teal-100 dark:hover:bg-teal-900">
-            <Image src="/images/materiel.png" width={300} height={300} alt="Armes multiples" className="mb-4"/>
+            <Image src="/images/picto7.png" width={200} height={200} alt="Armes multiples" className="mb-4"/>
             <h3 className="font-bold text-lg text-gray-900 dark:text-white mb-2">Choisissez votre arme</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">
               Katana, sabre laser, épée pirate ou médiévale avec protection mousse.
@@ -141,7 +141,7 @@ const BattleSword: React.FC = () => {
         custom={3}
       >
         <div className="md:w-1/2">
-          <Image src="/images/materiel.png" width={600} height={400} alt="Borne d'arcade Battle Sword" className="rounded-xl shadow-lg"/>
+          <Image src="/images/ready.png" width={600} height={400} alt="Borne d'arcade Battle Sword" className="rounded-xl shadow-lg"/>
         </div>
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">La Borne d’arcade</h2>

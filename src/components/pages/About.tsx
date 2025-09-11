@@ -20,8 +20,8 @@ const AProposContent = () => {
             CODATECH est une entreprise spécialisée dans le développement de
             technologies innovantes qui allient sport, divertissement et
             réalité augmentée. Nos solutions transforment l’expérience du
-            combat sportif et de l’animation en mélangeant **jeu vidéo et
-            réalité**.
+            combat sportif et de l’animation en mélangeant jeu vidéo et
+            réalité.
           </p>
         </div>
         <div className="flex justify-center">
@@ -65,12 +65,12 @@ const AProposContent = () => {
           <TechCard
             title="O.A.R.K"
             description="Un système qui permet aux combattants de devenir les héros de leur propre jeu vidéo, projeté en temps réel sur écran avec barres de vie, stream, multijoueurs et animations."
-            image="/images/materiel.png"
+            image="/images/OARK.png"
           />
           <TechCard
             title="BattleSword"
             description="Une technologie innovante qui transforme n’importe quelle arme (katana, hache, sabre laser, etc.) en périphérique interactif, connecté à nos systèmes immersifs."
-            image="/images/materiel.png"
+            image="/images/BSIMG1.png"
           />
         </div>
       </section>

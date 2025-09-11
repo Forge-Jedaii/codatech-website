@@ -6,8 +6,8 @@ const Card1 = () => {
     <StyledWrapper>
       <div className="card">
         <div className="img" />
-        <span>Ici</span>
-        <p className="info">Bienvenue dans l&apos;univers Codatech.</p>
+        <span>O-ARK</span>
+        <p className="info">Quand technologie et sport ressortent la classique BATTLE ROYALE.</p>
 
         {/* Conteneur des icônes */}
         <div className="share">
@@ -75,12 +75,12 @@ const StyledWrapper = styled.div`
   }
 
   .card .img {
-    width: 4.8em;
-    height: 4.8em;
-    background: white;
-    border-radius: 15px;
-    margin: 0.5em auto;
-  }
+  width: 4.8em;
+  height: 4.8em;
+  background: url("/images/OARKrouge.png") no-repeat center center/cover;
+  border-radius: 15px;
+  margin: 0.5em auto;
+}
 
   .card .share {
     margin-top: auto;

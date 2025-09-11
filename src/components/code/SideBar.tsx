@@ -20,6 +20,7 @@ import ContactContent from "../pages/Contact";
 import OArkContent from "../pages/Oark";
 import AProposContent from "../pages/About";
 import Card1 from "./Cards1";
+import Card2 from "./Cards2";
 
 export function SidebarDemo() {
   const [open, setOpen] = useState(false);
@@ -187,11 +188,11 @@ const NouveautesContent = () => (
     <Card1 />
   </div>
   <div className="w-full sm:w-64 md:w-72 lg:w-80">
-    <Card />
+    <Card2 />
   </div>
-  <div className="w-full sm:w-64 md:w-72 lg:w-80">
+  {/* <div className="w-full sm:w-64 md:w-72 lg:w-80">
     <Card />
-  </div>
+  </div> */}
 </div>
 
     </div>

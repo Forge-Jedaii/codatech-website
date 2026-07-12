@@ -38,7 +38,7 @@ const content = {
     detailCopy: "Une expérience autonome avec retour visuel et sonore, idéale pour les événements et lieux de loisirs. Deux joueurs s'affrontent par arène avec scores affichés en direct.",
     detailImage: "/images/borne.png",
     detailAlt: "Borne d'arcade BattleSword",
-    audience: "Disponible partout en France pour les entreprises, anniversaires, centres aérés et campings. La licence professionnelle inclut formation et support pour salles VR, parcs de loisirs, escape games ou kartings.",
+    audience: "Disponible partout en France pour les entreprises, anniversaires, centres aérés et campings. La licence professionnelle inclut formation et support pour salles VR, parcs de loisirs, escape games ou kartings etc",
   },
 };
 

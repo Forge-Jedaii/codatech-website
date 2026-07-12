@@ -1,54 +1,23 @@
-// layout.tsx
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// Meta tags Open Graph + Twitter
 export const metadata: Metadata = {
-  title: "Codatech",
-  description: "BattleSword | Oark",
+  metadataBase: new URL("https://codatech.fr"),
+  title: "CODATECH — Interactive technologies for real-world experiences",
+  description:
+    "CODATECH imagine des technologies et des expériences interactives qui reconnectent les personnes au monde réel.",
   openGraph: {
-    title: "Codatech",
-    description: "Site web de Codatech",
-    url: "https://codatech-website.vercel.app/",
-    siteName: "Codatech",
-    images: [
-      {
-        url: "/images/COD_solo.png", // ton image de vignette
-        width: 1200,
-        height: 630,
-      },
-    ],
+    title: "CODATECH — Technology in motion.",
+    description: "Technologies interactives, expériences événementielles et innovations conçues en France.",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Codatech",
-    description: "BattleSword | Oark",
-    images: ["/images/COD_solo.png"],
+    locale: "fr_FR",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className="dark bg-black text-white">
-  <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen`}>
-    {children}
-  </body>
-</html>
+    <html lang="fr" className="dark">
+      <body>{children}</body>
+    </html>
   );
 }
